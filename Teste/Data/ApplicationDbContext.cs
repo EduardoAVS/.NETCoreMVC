@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Teste.Models;
 
 namespace Teste.Data
 {
@@ -8,5 +9,6 @@ namespace Teste.Data
         {
             
         }
+        public DbSet<Category> Categories { get; set; }
     }
 }
