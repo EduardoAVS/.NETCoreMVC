@@ -7,7 +7,7 @@
         </div>
 
         <div class="col-6 text-end">
-            <a asp-controller="" asp-action="" class="btn btn-dark">
+            <a asp-controller="Category" asp-action="Create" class="btn btn-dark">
                 <i class="bi bi-plus-circle"></i>
                 Create New Category
             </a>
@@ -22,6 +22,9 @@
             <th>
                 Display Order
             </th>
+            <th>
+
+            </th>
         </tr>
         </thead>
         <tbody>
@@ -30,7 +33,16 @@
                 <tr>
                     <td>@obj.Name</td>
                     <td>@obj.DisplayOrder</td>
-
+                    <td>
+                        <div class="w-75 btn-group d-inline-flex" role="group">
+                            <a asp-controller="Category" asp-action="Edit" asp-route-Id="@obj.Id" class="btn btn-dark mx-2">
+                                <i class="bi bi-pencil-square"></i> Edit
+                            </a>
+                            <a asp-controller="Category" asp-action="Edit" class="btn btn-danger mx-2">
+                                <i class="bi bi-trash3-fill"></i> Delete
+                            </a>
+                        </div>
+                    </td>
                 </tr>
             }
         </tbody>
